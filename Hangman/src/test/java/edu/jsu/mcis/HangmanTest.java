@@ -50,9 +50,18 @@ public class HangmanTest {
     // test pass correctly.
     @Test
     public void testSixOrMoreMissesCausesALoss() {
-        assertTrue(false);
+		Hangman h = new Hangman();
+		h.setWord("inconceivable");
+		/*h.available('b');
+		h.available('d');
+		h.available('f');
+		h.available('g');
+		h.available('h');
+		h.available('j');
+		assertFalse(h.missedLettersCount()); */
+		assertTrue(h.missedLettersCount());
     }
-    
+   
     // Exam Question 5
     // Implement this unit test to ensure that guessing all the 
     // letters correctly before six misses results in a win. Then,
@@ -60,7 +69,11 @@ public class HangmanTest {
     // test pass correctly.
     @Test
     public void testGuessingEveryLetterBeforeSixMissesCausesAWin() {
-        assertTrue(false);
+        Hangman h = new Hangman();
+		h.setWord("inconceivable");
+		assertTrue(h.missedLettersCount());
+		assertEquals(h.Result.WIN, h.getResult());
+		
     }
     
 }
